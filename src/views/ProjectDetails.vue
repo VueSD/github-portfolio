@@ -12,6 +12,10 @@
 <script>
 export default {
   props: {
+    username: {
+      type: String,
+      required: true
+    },
     project: {
       type: String,
       required: true
@@ -25,10 +29,9 @@ export default {
   },
 
   async created() {
-    const username = "SDVue";
     // Github API Docs: https://developer.github.com/v3/repos/#get
     this.details = await fetch(
-      `https://api.github.com/repos/${username}/${this.project}`
+      `https://api.github.com/repos/${this.username}/${this.project}`
     ).then(res => res.json());
   }
 };

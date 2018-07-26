@@ -10,18 +10,19 @@
 
 <script>
 export default {
+  props: ["username"],
+
   data: () => ({
     projects: []
   }),
 
   async created() {
-    const username = "SDVue";
     // Fetch Docs: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
     // Github API Docs: https://developer.github.com/v3/repos/#list-user-repositories
 
     // Fetch the API response
     this.projects = await fetch(
-      `https://api.github.com/users/${username}/repos`
+      `https://api.github.com/users/${this.username}/repos`
     ).then(
       // Transform the response object into the response json (what we really want)
       res => res.json()

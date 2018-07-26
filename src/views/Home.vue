@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <ProjectList />
+    <ProjectList :username="username" />
   </div>
 </template>
 
@@ -9,7 +9,8 @@
 import ProjectList from "@/components/ProjectList.vue";
 
 export default {
-  name: "home",
+  props: ["username"],
+
   components: {
     ProjectList
   }
