@@ -2,7 +2,7 @@
   <div class="project-list">
     <ul>
       <li v-for="project in projects" :key="project.id">
-        {{ project.name }}
+        <router-link :to="`/${project.name}`">{{ project.name }}</router-link>
       </li>
     </ul>
   </div>
