@@ -1,9 +1,7 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <h1>GitHub Projects</h1>
+
     <router-view/>
   </div>
 </template>
@@ -25,5 +23,19 @@
       color: #42b983;
     }
   }
+}
+h1,
+h2 {
+  font-weight: normal;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  margin: 10px;
+}
+a {
+  color: #42b983;
 }
 </style>
