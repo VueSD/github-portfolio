@@ -45,7 +45,7 @@ npm run test:e2e
 - ~~Setup env files~~
 - ~~Get GitHub API keys~~
 - ~~Abstract API service~~
-- Global SCSS config
+- ~~Global SCSS config~~
 
 ### [1.0.0]
 
