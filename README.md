@@ -38,18 +38,27 @@ npm run test:e2e
 
 ---
 
-# Project Steps
+# Releases
 
-1.  Clone project & install dependencies
-2.  Explore architecture
-3.  Replace homepage with prototype content
-4.  Incorporate Github API for public repos
-5.  Add child route for individual projects
-6.  Refactor how we handle props
+### [2.0.0]
 
-**Bonus steps:**
+- Setup env files
+- Get GitHub API keys
+- Abstract API service
+- Global SCSS config
 
-7.  Add routing between projects
-8.  Add UI to select users
-9.  Publish to Netlify
-10. Implement best practices
+### [1.0.0]
+
+- ~~Clone project & install dependencies~~
+- ~~Explore architecture~~
+- ~~Replace homepage with prototype content~~
+- ~~Incorporate Github API for public repos~~
+- ~~Add child route for individual projects~~
+- ~~Refactor how we handle props~~
+
+# Backlog
+
+- Add routing between projects
+- Add UI to select users
+- Publish to Netlify
+- Implement best practices
