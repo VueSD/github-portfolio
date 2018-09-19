@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import API from "@/api";
 export default {
   props: ["username"],
 
@@ -17,25 +18,8 @@ export default {
   }),
 
   async created() {
-    // Fetch Docs: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
-    // Github API Docs: https://developer.github.com/v3/repos/#list-user-repositories
-
-    // Fetch the API response
-    this.projects = await fetch(
-      `https://api.github.com/users/${this.username}/repos`
-    ).then(
-      // Transform the response object into the response json (what we really want)
-      res => res.json()
-    );
+    this.projects = await API.getProjects(this.username);
   }
-  // Example without async/await
-  // created() {
-  //   fetch(`https://api.github.com/users/${username}/repos`)
-  //     .then(res => res.json())
-  //     .then(res => {
-  //       this.items = res;
-  //     });
-  // }
 };
 </script>
 

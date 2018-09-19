@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import API from "@/api";
 export default {
   props: {
     username: {
@@ -29,10 +30,8 @@ export default {
   },
 
   async created() {
-    // Github API Docs: https://developer.github.com/v3/repos/#get
-    this.details = await fetch(
-      `https://api.github.com/repos/${this.username}/${this.project}`
-    ).then(res => res.json());
+    const { username, project } = this;
+    this.details = await API.getProjectDetails({ username, project });
   }
 };
 </script>
