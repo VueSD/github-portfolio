@@ -1,4 +1,14 @@
-# github-portfolio
+# GitHub Portfolio in Vue.js
+
+## Clone the latest release
+
+```
+git clone  https://github.com/VueSD/github-portfolio.git --branch 1.0.0
+```
+
+NOTE: Make sure you update the `--branch` flag with the release you want
+
+Or you can download directly from releases: https://github.com/VueSD/github-portfolio/releases
 
 ## Project setup
 
