@@ -21,5 +21,8 @@ describe("ProjectDetails.vue", () => {
     });
     expect(wrapper.html()).toBeUndefined();
     expect(wrapper.vm.details).toBeNull();
+    wrapper.vm.$nextTick(() => {
+      console.log(wrapper.html());
+    });
   });
 });
