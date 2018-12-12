@@ -4,7 +4,7 @@ import ProjectDetails from "@/views/ProjectDetails.vue";
 describe("ProjectDetails.vue", () => {
   it("does the tests!!!", () => {
     const wrapper = shallowMount(ProjectDetails, {
-      props: {
+      propsData: {
         username: "VueSD",
         project: "github-portfolio"
       }
