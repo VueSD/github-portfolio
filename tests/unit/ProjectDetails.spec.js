@@ -11,18 +11,22 @@ API.getProjectDetails = jest.fn(({ username, project }) => {
 });
 
 describe("ProjectDetails.vue", () => {
-  it("does the tests!!!", () => {
-    const wrapper = shallowMount(ProjectDetails, {
+  let wrapper;
+  beforeEach(() => {
+    wrapper = shallowMount(ProjectDetails, {
       stubs: ["router-link"],
       propsData: {
         username: "VueSD",
         project: "github-portfolio"
       }
     });
-    expect(wrapper.html()).toBeUndefined();
-    expect(wrapper.vm.details).toBeNull();
-    wrapper.vm.$nextTick(() => {
-      console.log(wrapper.html());
-    });
+  });
+
+  describe("vm.created()", () => {
+    // Tests
+  });
+
+  describe("html", () => {
+    // Tests
   });
 });
