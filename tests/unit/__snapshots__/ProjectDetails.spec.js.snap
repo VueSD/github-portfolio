@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectDetails.vue html should match the snapshot 1`] = `
+<div class="project">
+  <h3 class="project__name">Project: github-portfolio</h3>
+  <p class="project__description">A fancy project by VueSD.</p>
+  <p class="project__url">
+    <a href="https://github.com/VueSD/github-portfolio">https://github.com/VueSD/github-portfolio</a>
+  </p>
+  <router-link-stub to="/">Home</router-link-stub>
+</div>
+`;
