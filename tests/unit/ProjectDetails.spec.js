@@ -61,6 +61,20 @@ describe("ProjectDetails.vue", () => {
   });
 
   describe("html", () => {
-    // Tests
+    it("should show project name, description, and url", () => {
+      const name = wrapper.find(".project__name");
+      const description = wrapper.find(".project__description");
+      const url = wrapper.find(".project__url");
+      const definitelyNote = wrapper.find(".definitelyNote");
+      expect(name.exists()).toBe(true);
+      expect(description.exists()).toBe(true);
+      expect(url.exists()).toBe(true);
+      expect(definitelyNote.exists()).toBe(false);
+    });
+    it("should include our props in the text", () => {
+      let text = wrapper.text();
+      expect(text.includes(username)).toBe(true);
+      expect(text.includes(project)).toBe(true);
+    });
   });
 });

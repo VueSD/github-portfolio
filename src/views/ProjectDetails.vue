@@ -1,8 +1,11 @@
 <template>
-  <div v-if="details">
-    <h3>{{ details.name }}</h3>
-    <p>{{ details.description }}</p>
-    <p>
+  <div
+    v-if="details"
+    class="project"
+  >
+    <h3 class="project__name">{{ details.name }}</h3>
+    <p class="project__description">{{ details.description }}</p>
+    <p class="project__url">
       <a :href="details.html_url">{{ details.html_url }}</a>
     </p>
     <router-link to="/">Home</router-link>
