@@ -7,7 +7,6 @@ describe("My First Test", () => {
     cy.get("a")
       .first("a")
       .click();
-    // cy.wait(1000);
     cy.get("h3");
     cy.get(".router-link-active").click();
     cy.contains("h1", "GitHub Projects");
