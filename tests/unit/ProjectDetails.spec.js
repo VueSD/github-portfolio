@@ -2,12 +2,16 @@ import { shallowMount } from "@vue/test-utils";
 import ProjectDetails from "@/views/ProjectDetails.vue";
 import API from "@/api";
 
-API.getProjectDetails = jest.fn(({ username, project }) => {
-  return Promise.resolve({
-    name: `Project: ${project}`,
-    description: `A fancy project by ${username}.`,
-    html_url: `https://github.com/${username}/${project}`
-  });
+jest.mock("@/api", () => {
+  return {
+    getProjectDetails: jest.fn(({ username, project }) => {
+      return Promise.resolve({
+        name: `Project: ${project}`,
+        description: `A fancy project by ${username}.`,
+        html_url: `https://github.com/${username}/${project}`
+      });
+    })
+  };
 });
 
 const username = "VueSD";
