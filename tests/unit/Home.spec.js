@@ -9,7 +9,7 @@ jest.mock("@/api", () => {
       const projects = new Array(6).fill(0).map((el, idx) => {
         return {
           id: idx,
-          name: `project-${idx}`
+          name: `${username}-project-${idx}`
         };
       });
       return Promise.resolve(projects);

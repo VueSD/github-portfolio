@@ -1,7 +1,6 @@
 image: node:10.14.2
 
 stages:
-  - build
   - test
   - deploy
 
