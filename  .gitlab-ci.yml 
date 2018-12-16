@@ -1,6 +1,7 @@
-image: node:10
+image: node:10.14.2
 
 stages:
+  - build
   - test
   - deploy
 
@@ -14,4 +15,4 @@ Publish to netlify:
   stage: deploy
   script:
     # Triggers a build trigger from netlify
-    - curl -X POST -d '{}' https://api.netlify.com/build_hooks/5c16719d97e8e03903836153
+    - curl -X POST -d {} https://api.netlify.com/build_hooks/5c16719d97e8e03903836153
