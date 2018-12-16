@@ -1,0 +1,17 @@
+image: node:10
+
+stages:
+  - test
+  - deploy
+
+Run test scripts:
+  stage: test
+  script:
+    - npm install
+    - npm run test:unit
+
+Publish to netlify:
+  stage: deploy
+  script:
+    # Triggers a build trigger from netlify
+    - curl -X POST -d '{}' https://api.netlify.com/build_hooks/5c16719d97e8e03903836153
