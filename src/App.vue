@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>GitHub Projects</h1>
+    <h1>VueSD Projects</h1>
 
     <router-view username="VueSD" />
   </div>
