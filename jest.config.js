@@ -12,5 +12,12 @@ module.exports = {
   snapshotSerializers: ["jest-serializer-vue"],
   testMatch: [
     "**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
+  ],
+  coverageDirectory: "<rootDir>/tests/unit/coverage",
+  collectCoverageFrom: [
+    "src/**/*.{js,vue}",
+    "!src/main.js",
+    "!src/router.js",
+    "!**/node_modules/**"
   ]
 };

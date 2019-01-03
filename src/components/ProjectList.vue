@@ -1,7 +1,10 @@
 <template>
   <div class="project-list">
     <ul>
-      <li v-for="project in projects" :key="project.id">
+      <li
+        v-for="project in projects"
+        :key="project.id"
+      >
         <router-link :to="`/${project.name}`">{{ project.name }}</router-link>
       </li>
     </ul>
@@ -22,6 +25,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-</style>
